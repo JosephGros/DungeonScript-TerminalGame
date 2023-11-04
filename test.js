@@ -65,66 +65,88 @@ class skills {
         this.swiftStrikes = swiftStrikes; this.rapidShot = rapidShot; this.daggerDance = daggerDance; this.rDefense = rDefense;
     }
 
-    mageAbilities(){
+    mageAbilitiesLog(){
         console.log('- Your abilities: ');
-        this.ability.forEach(abilitys => {
-            console.log('  - ' + abilitys)});
+
+        console.log('- ' + this.ability)
         this.power.forEach(abilitys => {
             console.log('  - ' + abilitys)});
-        this.damageType.forEach(abilitys => {
+        
+            console.log('- ' + this.stat)
+            this.damageType.forEach(abilitys => {
+            console.log('  ¤ ' + abilitys)});
+        
+            console.log('- ' + this.manaCost)
+            this.fireBolt.forEach(abilitys => {
+            console.log('  ¤ ' + abilitys)});
+        
+            console.log('- ' + this.iceBlast)
+            this.lightningBolt.forEach(abilitys => {
+            console.log('  ¤ ' + abilitys)});
+        
+       }
+    
+       warriorAbilitiesLog(){
+        console.log('- Your abilities: ');
+
+        console.log('- ' + this.ability)
+        this.power.forEach(abilitys => {
             console.log('  - ' + abilitys)});
-        this.manaCost.forEach(abilitys => {
-            console.log('  - ' + abilitys)}); 
+        
+            console.log('- ' + this.stat)
+            this.damageType.forEach(abilitys => {
+            console.log('  ¤ ' + abilitys)});
+        
+            console.log('- ' + this.manaCost)
+            this.fireBolt.forEach(abilitys => {
+            console.log('  ¤ ' + abilitys)});
+        
+            console.log('- ' + this.iceBlast)
+            this.lightningBolt.forEach(abilitys => {
+            console.log('  ¤ ' + abilitys)}); 
        }
     
-       warriorAbilities(){
-        console.log('- Your abilities: ')
-        this.slash.forEach(ability => {
-            console.log('  - ' + ability)});
-        this.stab.forEach(ability => {
-            console.log('  - ' + ability)});
-        this.punch.forEach(ability => {
-            console.log('  - ' + ability)});
-        this.wDefense.forEach(ability => {
-            console.log('  - ' + ability)}); 
-       }
-    
-       rogueAbilities(){
-        console.log('- Your abilities: ')
-        this.swiftStrikes.forEach(ability => {
-            console.log('  - ' + ability)});
-        this.rapidShot.forEach(ability => {
-            console.log('  - ' + ability)});
-        this.daggerDance.forEach(ability => {
-            console.log('  - ' + ability)});
-        this.rDefense.forEach(ability => {
-            console.log('  - ' + ability)}); 
+       rogueAbilitiesLog(){
+        console.log('- Your abilities: ');
+
+        console.log('- ' + this.ability)
+        this.power.forEach(abilitys => {
+            console.log('  - ' + abilitys)});
+        
+            console.log('- ' + this.stat)
+            this.damageType.forEach(abilitys => {
+            console.log('  ¤ ' + abilitys)});
+        
+            console.log('- ' + this.manaCost)
+            this.fireBolt.forEach(abilitys => {
+            console.log('  ¤ ' + abilitys)});
+        
+            console.log('- ' + this.iceBlast)
+            this.lightningBolt.forEach(abilitys => {
+            console.log('  ¤ ' + abilitys)});
        }
 
 }
 
-// //Abilities
-// //Mage
-// const fireBolt = new skills(['Fire Bolt', 40, 'Attack', 'Magic', 30]);
-// const iceBlast = new skills(['Ice Blast', 30, 'Attack', 'Magic', 20]);
-// const lightningBolt = new skills(['Lightning Bolt', 15, 'Attack', 'Magic', 10]);
-// const mDefense = new skills(['Defense', 0, 'Defense', 'Defense', 15]);
-// //Warrior
-// const slash = new skills(['Slash', 40, 'Attack', 'Physical damage', 30]);
-// const stab = new skills(['Stab', 30, 'Attack', 'Physical damage', 20]);
-// const punch = new skills(['Punch', 15, 'Attack', 'Physical damage', 10]);
-// const wDefense = new skills(['Defense', 0, 'Defense', 'Defense', 15]);
-// //Rogue
-// const swiftStrikes = new skills(['Swift strikes', 40, 'Attack', 'Physical damage', 30]);
-// const rapidShot = new skills(['Stab', 30, 'Attack', 'Physical damage', 20]);
-// const daggerDance = new skills(['Punch', 15, 'Attack', 'Magic', 10]);
-// const rDefense = new skills(['Defense', 0, 'Defense', 'Defense', 15]);
+//Abilities
+//Mage
+const mageAbilities = new skills(
+    'Fire Bolt', ['Power: ' + 40,'Stat: Attack','Damage Type: Magic','Mana Cost: ' + 30],
+    'Ice Blast', ['Power: ' +30, 'Stat: Attack', 'Damage Type: Magic', 'Mana Cost: '+20],
+    'Lightning Bolt', ['Power: '+15, 'Stat: Attack', 'Damage Type: Magic', 'Mana Cost: '+10],
+    'Defense', ['Stat: Defense', 'Mana Cost: '+15]);
 
-const mageAbility = [new skills('Fire Bolt', 40, 'Attack', 'Magic', 30), new skills('Ice Blast', 30, 'Attack', 'Magic', 20),
-new skills('Lightning Bolt', 15, 'Attack', 'Magic', 10), new skills('Defense', 0, 'Defense', 'Defense', 15)];
-//const warriorAbility = [slash, stab, punch, wDefense];
-//const rogueAbility = new skills([swiftStrikes, rapidShot, daggerDance, rDefense]);
+ const warriorAbilities = new skills(
+    'Slash', ['Power: ' + 40,'Stat: Attack','Damage Type: Physical Damage','Mana Cost: ' + 30], 
+    'Stab', ['Power: ' +30, 'Stat: Attack', 'Damage Type: Physical Damage', 'Mana Cost: '+20],
+    'Punch', ['Power: '+15, 'Stat: Attack', 'Damage Type: Physical Damage', 'Mana Cost: '+10], 
+    'Defense', ['Stat: Defense', 'Mana Cost: '+15]);
 
+ const rogueAbilities = new skills(
+    'Swift Strikes', ['Power: ' + 40,'Stat: Attack','Damage Type: Physical Damage','Mana Cost: ' + 30], 
+    'Rapid Shot', ['Power: ' +30, 'Stat: Attack', 'Damage Type: Physical Damage', 'Mana Cost: '+20],
+    'Dagger Dance', ['Power: '+15, 'Stat: Attack', 'Damage Type: Magic', 'Mana Cost: '+10], 
+    'Defense', ['Stat: Defense', 'Mana Cost: '+15]);
 class gameLaunch {
 
 
@@ -139,7 +161,8 @@ class gameLaunch {
                 console.log('Ok bye see you later!');
             break;
             default:
-                console.log('Sorry you need to choose between [y] - [n]')
+                console.log('Sorry you need to choose between [y] - [n]');
+                Start.welcome();
 
         }
     }
@@ -174,10 +197,8 @@ class gameLaunch {
         let chosen2 = prompt('Yes: [y] No: [n]: ');
         switch(chosen2) {
             case 'y':
-                console.log('- Your abilities: ')
-                mageAbility.forEach(skill => {
-                    skill.mageAbilities();
-                })
+                console.log('__________________\n');
+                mageAbilities.mageAbilitiesLog();
             break;
             case 'n': 
                 console.log('Ok no problem!')
@@ -194,8 +215,8 @@ class gameLaunch {
         let chosen3 = prompt('Yes: [y] No: [n]: ');
         switch(chosen3) {
             case 'y':
-                console.log('Here they are!')
-                warriorAbility.warriorAbilities();
+                console.log('__________________\n');
+                warriorAbilities.mageAbilitiesLog();
             break;
             case 'n': 
                 console.log('Ok no problem!')
@@ -212,8 +233,8 @@ class gameLaunch {
         let chosen4 = prompt('Yes: [y] No: [n]: ');
         switch(chosen4) {
             case 'y':
-                console.log('Here they are!')
-                rogueAbility.rogueAbilities();
+                console.log('__________________\n');
+                rogueAbilities.mageAbilitiesLog();
             break;
             case 'n': 
                 console.log('Ok no problem!')
@@ -227,87 +248,8 @@ class gameLaunch {
 
 }
 
-// class charachterAbility extends skills{
-//     fireBolt; iceBlast; lightningBolt; mDefense;
-//     slash; stab; punch; wDefense;
-//     swiftStrikes; rapidShot; daggerDance; rDefense;
- 
-//     constructor(fireBolt, iceBlast, lightningBolt, mDefense, slash, stab,
-//      punch, wDefense, swiftStrikes, rapidShot,  daggerDance, rDefense){
-//          //Mage abilities
-//          super(fireBolt), this.iceBlast = iceBlast; this.lightningBolt = lightningBolt; this.mDefense = mDefense;
-//          //Warrior abilities
-//          this.slash = slash; this.stab = stab; this.punch = punch; this.wDefense = wDefense;
-//          //Rogue abilities 
-//          this.swiftStrikes = swiftStrikes; this.rapidShot = rapidShot; this.daggerDance = daggerDance; this.rDefense = rDefense;
-//     }
- 
-//      // Här ska du skriva ut alla abilities en för sig för Mage och sedan göra en ny metod för varje karaktär.
-//      // och sedan lägga in de abilities längre ner så att när de trycker ja får de upp rätt abilities.
- 
-//     mageAbilities(){
-//      console.log('- Your abilities: ')
-//      this.fireBolt.forEach(ability => {
-//          console.log('  - ' + ability)});
-//      this.iceBlast.forEach(ability => {
-//          console.log('  - ' + ability)});
-//      this.lightningBolt.forEach(ability => {
-//          console.log('  - ' + ability)});
-//      this.mDefense.forEach(ability => {
-//          console.log('  - ' + ability)}); 
-//     }
- 
-//     warriorAbilities(){
-//      console.log('- Your abilities: ')
-//      this.slash.forEach(ability => {
-//          console.log('  - ' + ability)});
-//      this.stab.forEach(ability => {
-//          console.log('  - ' + ability)});
-//      this.punch.forEach(ability => {
-//          console.log('  - ' + ability)});
-//      this.wDefense.forEach(ability => {
-//          console.log('  - ' + ability)}); 
-//     }
- 
-//     rogueAbilities(){
-//      console.log('- Your abilities: ')
-//      this.swiftStrikes.forEach(ability => {
-//          console.log('  - ' + ability)});
-//      this.rapidShot.forEach(ability => {
-//          console.log('  - ' + ability)});
-//      this.daggerDance.forEach(ability => {
-//          console.log('  - ' + ability)});
-//      this.rDefense.forEach(ability => {
-//          console.log('  - ' + ability)}); 
-//     }
- 
-//  }
- 
- //const abilities = new charachterAbility();
-
 //Game launch
 const Start = new gameLaunch();
 const Start2 = new gameLaunch();
 
 Start.welcome()
-
-// class skills extends charachters {
-//     physical; //physical damage/power
-//     strenght; //The charachters strength
-//     speed; //speed fast damage/power
-//     magic; //Magic damage/power
-//     defense; //what defense the charachters have
-
-//     constructor(physical, strenght, speed, magic, defense){
-//         this.physical = physical;
-//         this.strenght = strenght;
-//         this.speed = speed;
-//         this.magic = magic;
-//         this.defense = defense;
-//     }
-// }
-
-
-
-
-//skillls.myskills();
