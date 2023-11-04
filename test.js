@@ -5,16 +5,16 @@ class charachters {
     type;
     abilities;
     hp;
-    attack;
+    attackdmg;
     mana;
     weakness;
 
-    constructor(name, type, abilities, hp, attack, mana, weakness){
+    constructor(name, type, abilities, hp, attackdmg, mana, weakness){
         this.name = name;
         this.type = type
         this.abilities = abilities;
         this.hp = hp;
-        this.attack = attack;
+        this.attackdmg = attackdmg;
         this.mana = mana
         this.weakness = weakness;
     }
@@ -27,7 +27,7 @@ class charachters {
             console.log('  ¤ ' + skill)
         });
         console.log('- HP:', this.hp);
-        console.log('- Attack Damage:', this.attack);
+        console.log('- Attack Damage:', this.attackdmg);
         console.log('- Mana: ', this.mana)
         console.log('- Weakness:', this.weakness);
     }
@@ -38,100 +38,132 @@ const mage = new charachters('Elowen Stormweaver','Mage', ['Fire Bolt', 'Ice Bla
 const warrior = new charachters('Sir Cedric Ironclad','Warrior', ['Slash', 'Stab', 'Punch', 'wDefense', ], 120, 40, 100, 'Speed');
 const rogue = new charachters('Lyra Shadowblade','Rogue', ['Swift strikes', 'Rapid shot', 'Dagger Dance', 'rDefense', ], 90, 50, 100, 'Magic');
 
+
+class bosses {
+    bossName;
+    bossType;
+    bossAbilities;
+    bossHP;
+    bossAttackdmg;
+    bossWeakness;
+
+    constructor(bossName, bossType, bossAbilities, bossHP, bossAttackdmg, bossWeakness){
+    this.bossName = bossName;
+    this.bossType = bossType;
+    this.bossAbilities = bossAbilities;
+    this.bossHP = bossHP;
+    this.bossAttackdmg = bossAttackdmg;
+    this.bossWeakness = bossWeakness;
+    }
+
+}
 //Enemy bosses
+const kutulu = new charachters();
+const demogorgon = new charachters();
+const vecna = new charachters();
+const lilith = new charachters();
+const orcus = new charachters();
+const baphomet = new charachters();
+const bahamut = new charachters();
+const lorthulu = new charachters();
+const xanathar = new charachters();
+const acererak = new charachters();
+const raistlin = new charachters();
+const dourden = new charachters();
+const baelor = new charachters();
+const selenea = new charachters();
+const maelgrim = new charachters();
+const gryphonax = new charachters();
+const satan = new charachters();
+
 
 
 
 class skills {
-    ability;
-    power;
-    stat;
-    damageType;
-    manaCost;
-    fireBolt; iceBlast; lightningBolt; mDefense;
-    slash; stab; punch; wDefense;
-    swiftStrikes; rapidShot; daggerDance; rDefense;
+    ability1; power;
+    ability2; stat;
+    ability3; damageType;
+    ability4; manaCost;
 
-    constructor(ability, power, stat, damageType, manaCost, fireBolt, iceBlast, lightningBolt, mDefense, slash, stab,
-        punch, wDefense, swiftStrikes, rapidShot,  daggerDance, rDefense){
-        this.ability = ability; this.power = power;
-        this.stat = stat; this.damageType = damageType;
-        this.manaCost = manaCost;
-        //Mage abilities
-        this.fireBolt = fireBolt, this.iceBlast = iceBlast; this.lightningBolt = lightningBolt; this.mDefense = mDefense;
-        //Warrior abilities
-        this.slash = slash; this.stab = stab; this.punch = punch; this.wDefense = wDefense;
-        //Rogue abilities 
-        this.swiftStrikes = swiftStrikes; this.rapidShot = rapidShot; this.daggerDance = daggerDance; this.rDefense = rDefense;
-    }
+    constructor(
+        ability1, power,
+        ability2, stat,
+        ability3, damageType,
+        ability4, manaCost,){
+        this.ability1 = ability1; this.power = power;
+        this.ability2 = ability2; this.stat = stat;
+        this.ability3 = ability3; this.damageType = damageType;
+        this.ability4 = ability4; this.manaCost = manaCost;
+        }
+        
+    
 
     mageAbilitiesLog(){
         console.log('- Your abilities: ');
 
-        console.log('- ' + this.ability)
+        console.log('- ' + this.ability1)
         this.power.forEach(abilitys => {
-            console.log('  - ' + abilitys)});
+        console.log('  ¤ ' + abilitys)});
         
-            console.log('- ' + this.stat)
-            this.damageType.forEach(abilitys => {
-            console.log('  ¤ ' + abilitys)});
+        console.log('- ' + this.ability2)
+        this.stat.forEach(abilitys => {
+        console.log('  ¤ ' + abilitys)});
         
-            console.log('- ' + this.manaCost)
-            this.fireBolt.forEach(abilitys => {
-            console.log('  ¤ ' + abilitys)});
+        console.log('- ' + this.ability3)
+        this.damageType.forEach(abilitys => {
+        console.log('  ¤ ' + abilitys)});
         
-            console.log('- ' + this.iceBlast)
-            this.lightningBolt.forEach(abilitys => {
-            console.log('  ¤ ' + abilitys)});
+        console.log('- ' + this.ability4)
+        this.manaCost.forEach(abilitys => {
+        console.log('  ¤ ' + abilitys)});
         
        }
     
        warriorAbilitiesLog(){
         console.log('- Your abilities: ');
 
-        console.log('- ' + this.ability)
+        console.log('- ' + this.ability1)
         this.power.forEach(abilitys => {
-            console.log('  - ' + abilitys)});
-        
-            console.log('- ' + this.stat)
-            this.damageType.forEach(abilitys => {
-            console.log('  ¤ ' + abilitys)});
-        
-            console.log('- ' + this.manaCost)
-            this.fireBolt.forEach(abilitys => {
-            console.log('  ¤ ' + abilitys)});
-        
-            console.log('- ' + this.iceBlast)
-            this.lightningBolt.forEach(abilitys => {
-            console.log('  ¤ ' + abilitys)}); 
+        console.log('  ¤ ' + abilitys)});
+    
+        console.log('- ' + this.ability2)
+        this.stat.forEach(abilitys => {
+        console.log('  ¤ ' + abilitys)});
+    
+        console.log('- ' + this.ability3)
+        this.damageType.forEach(abilitys => {
+        console.log('  ¤ ' + abilitys)});
+    
+        console.log('- ' + this.ability4)
+        this.manaCost.forEach(abilitys => {
+        console.log('  ¤ ' + abilitys)}); 
        }
     
        rogueAbilitiesLog(){
         console.log('- Your abilities: ');
 
-        console.log('- ' + this.ability)
+        console.log('- ' + this.ability1)
         this.power.forEach(abilitys => {
-            console.log('  - ' + abilitys)});
-        
-            console.log('- ' + this.stat)
-            this.damageType.forEach(abilitys => {
-            console.log('  ¤ ' + abilitys)});
-        
-            console.log('- ' + this.manaCost)
-            this.fireBolt.forEach(abilitys => {
-            console.log('  ¤ ' + abilitys)});
-        
-            console.log('- ' + this.iceBlast)
-            this.lightningBolt.forEach(abilitys => {
-            console.log('  ¤ ' + abilitys)});
+        console.log('  ¤ ' + abilitys)});
+    
+        console.log('- ' + this.ability2)
+        this.stat.forEach(abilitys => {
+        console.log('  ¤ ' + abilitys)});
+    
+        console.log('- ' + this.ability3)
+        this.damageType.forEach(abilitys => {
+        console.log('  ¤ ' + abilitys)});
+    
+        console.log('- ' + this.ability4)
+        this.manaCost.forEach(abilitys => {
+        console.log('  ¤ ' + abilitys)});
        }
 
 }
 
 //Abilities
 //Mage
-const mageAbilities = new skills(
-    'Fire Bolt', ['Power: ' + 40,'Stat: Attack','Damage Type: Magic','Mana Cost: ' + 30],
+const mageAbilities = new skills('Fire Bolt', ['Power: ' + 40,'Stat: Attack','Damage Type: Magic','Mana Cost: ' + 30],
     'Ice Blast', ['Power: ' +30, 'Stat: Attack', 'Damage Type: Magic', 'Mana Cost: '+20],
     'Lightning Bolt', ['Power: '+15, 'Stat: Attack', 'Damage Type: Magic', 'Mana Cost: '+10],
     'Defense', ['Stat: Defense', 'Mana Cost: '+15]);
